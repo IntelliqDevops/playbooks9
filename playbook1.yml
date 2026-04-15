@@ -1,0 +1,14 @@
+---
+- name: Create user on all servers
+  hosts: all 
+  tasks:
+    - name: User creation
+      user:
+        name: anu
+        password: intelliqit
+        home: /home/anu
+        comment: "A super user"
+        uid: 1234
+        shell: /bin/bash
+
+...
