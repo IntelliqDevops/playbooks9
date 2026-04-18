@@ -1,0 +1,11 @@
+---
+- name: Create file using host scope variables
+  hosts: appserver
+  tasks:
+    - name: File creation
+      file:
+        name: "{{a}}"
+        state: "{{b}}"
+        owner: "{{c}}"
+        group: "{{d}}"
+
